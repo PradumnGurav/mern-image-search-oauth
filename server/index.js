@@ -3,6 +3,11 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import { connectDB } from './config/db.js';
+import apiRoutes from './routes/api.js';
+
+
+app.use('/api', apiRoutes);
+
 
 dotenv.config();
 const app = express();
